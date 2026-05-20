@@ -1,0 +1,162 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+  margin: 0;
+  font-family: Perpetua, trajan pro;
+  color: white;
+}
+
+/* Background */
+.background-container {
+  position: relative;
+  min-height: 100vh;
+}
+    .background-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROsWI34-2oQ2wXwgnTKlhw1GD4rhs4NEgVaA&s") center/cover;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* Layout */
+.content-container {
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Dropdown */
+    .dropbutton {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: black;
+  min-width: 180px;
+  border: 1px solid white;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: cyan;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: #222;
+}
+
+.show {
+  display: block;
+}
+
+/* Text */
+h1 {
+  font-size: 70px;
+  text-align: center;
+}
+
+p {
+  font-size: 50px;
+  line-height: 1.5;
+}
+
+a {
+  font-size: 50px;
+  line-height: 1.5;
+  color: light-gray;
+}
+
+/* Images */
+.floated-img {
+  float: left;
+  width: 300px;
+  margin: 10px;
+}
+  </style>
+  
+  <meta charset="UTF-8">
+  <title>Hollow Knight Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background-container">
+  <div class="content-container">
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="dropdown">
+        <button class="dropbutton" onclick="toggleDropdown()">
+          Menu ▾
+        </button>
+        <div id="dropdown-content" class="dropdown-content">
+          <a href="#">Help</a>
+          <a href="https://www.youtube.com/@Aver4geDash3r">My Youtube Channel</a>
+        </div>
+      </div>
+    </div>
+    <!-- IMAGE -->
+    <img src="https://philosophyandvideogamesblog.wordpress.com/wp-content/uploads/2018/04/aqdqx1t.jpg?w=1200&h=800&crop=1" class="floated-img">
+    <h1>Hollow Knight is peak!</h1>
+    <p>
+      In <a href="https://www.hollowknight.com/">Hollow Knight</a>, you will have fun exploring
+      <a href="https://hollowknight.fandom.com/wiki/Hallownest">Hallownest</a>,
+      trekking through the empty
+      <a href="https://hollowknight.fandom.com/wiki/Forgotten_Crossroads">Forgotten Crossroads</a>,
+      the lush greenery of
+      <a href="https://hollowknight.fandom.com/wiki/Greenpath">Greenpath</a>,
+      and even the beautiful
+      <a href="https://hollowknight.fandom.com/wiki/White_Palace">White Palace</a>.
+
+      Though, you will fight enemies and bosses like the easy
+      <a href="https://hollowknight.fandom.com/wiki/False_Knight">False Knight</a>
+      , all the way to the painful 
+      <a href="https://hollowknight.fandom.com/wiki/Absolute_Radiance">Absolute Radiance</a>.
+
+      There is also platforming like the infamous 
+      <a href="https://www.youtube.com/watch?v=a5EUUB5_HwY">Path of Pain</a>.
+
+      As soon as you unlock abilities like
+      <a href="https://hollowknight.fandom.com/wiki/Mothwing_Cloak">Dash</a>
+      and
+      <a href="https://hollowknight.fandom.com/wiki/Mantis_Claw">Mantis Claw</a>,
+      movement becomes much easier.
+
+      Spells can also be upgraded:
+      <a href="https://hollowknight.fandom.com/wiki/Vengeful_Spirit">Vengeful Spirit</a> →
+      <a href="https://hollowknight.fandom.com/wiki/Shade_Soul">Shade Soul</a>,
+      <a href="https://hollowknight.fandom.com/wiki/Desolate_Dive">Desolate Dive</a> →
+      <a href="https://hollowknight.fandom.com/wiki/Descending_Dark">Descending Dark</a>,
+      and
+      <a href="https://hollowknight.fandom.com/wiki/Howling_Wraiths">Howling Wraiths</a> →
+      <a href="https://hollowknight.fandom.com/wiki/Abyss_Shriek">Abyss Shriek</a>.
+    </p>
+  </div>
+</div>
+<script>
+function toggleDropdown() {
+  document.getElementById("dropdown-content").classList.toggle("show");
+}
+</script>
+</body>
+</html> 
